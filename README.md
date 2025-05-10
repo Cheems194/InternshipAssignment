@@ -3,10 +3,12 @@ A simple Node.js + Express backend for managing a list of schools, using MySQL a
 <hr>
 <h3>Features:-</h3>
 Add School (POST /addSchool):<br>
-Add a new school with name, address, latitude, and longitude.
+Add a new school with name, address, latitude, and longitude.<br>
+API Endpoint:- https://internshipassignment-production.up.railway.app/addSchool
 <br><br>
 List Schools (GET /listSchools):<br>
-Fetch all schools sorted by distance from the user's location (currently fixed at (0,0)).
+Fetch all schools sorted by distance from the user's location (currently fixed at (0,0)).<br>
+API Endpoint:- https://internshipassignment-production.up.railway.app/listSchools
 <hr>
 Tech Stack:-<br>Node.js, Express.js, MySQL (with mysql2 library), Hosted on Railway
 <hr>
