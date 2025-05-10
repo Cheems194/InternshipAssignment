@@ -1,12 +1,12 @@
 const mysql = require('mysql2/promise');
 
-const DB_NAME = 'school_management';
+const DB_NAME = process.env.DB_NAME;
 async function connectToDatabase() {
   try {
     const connection = await mysql.createConnection({
-      host: 'localhost',
-      user: 'root',
-      password: 'Habibik@22345',
+      host: process.env.DB_HOST,
+      user: process.env.DB_USER,
+      password: process.env.DB_PASSWORD,
       multipleStatements: true
     });
 
@@ -18,9 +18,9 @@ async function connectToDatabase() {
         });
 
     const dbConnection = await mysql.createConnection({
-      host: 'localhost',
-      user: 'root',
-      password: 'Habibik@22345',
+      host: process.env.DB_HOST,
+      user: process.env.DB_USER,
+      password: process.env.DB_PASSWORD,
       database: DB_NAME
     });
 

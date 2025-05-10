@@ -3,7 +3,7 @@ const express=require("express");
 const calculateDistance=require("./utils");
 
 const app=express();
-const port=8080;
+const PORT=process.env.PORT ||8080;
 
 let connection;
 
@@ -66,6 +66,6 @@ app.get('/listSchools', async (req, res) => {
 });
 
 
-app.listen(port,()=>{
-    console.log(`App is listening on port ${port}`);
+app.listen(PORT,()=>{
+    console.log(`App is listening on port ${PORT}`);
 })
